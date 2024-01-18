@@ -1,0 +1,249 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;700&display=swap');
+
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+
+/* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+*/
+
+/*   ----- Variables  -----  */
+:root {
+    --primary-light: #FF7F7F;
+    --primary-medium: #FF0000;
+    --primary-dark: #800000;
+    --contrast-color: #0c1485;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       
+  background-image: url('images/partidju_website_wallpaper.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5%;
+  padding: 5%;
+  max-width: 90%;
+  color: var(--primary-medium);
+  font-family: 'Victor Mono', monospace;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  color: var(--contrast-color);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 1em;
+  padding: 1em;
+  border: 2px solid var(--contrast-color);
+}
+main {
+  color: var(--contrast-color);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 1em;
+  padding: 1em;
+  border: 2px solid var(--contrast-color);
+}
+section {}
+article {}
+aside {}
+footer {
+  color: var(--contrast-color);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 1em;
+  padding: 1em;
+  border: 2px solid var(--contrast-color);
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  nav a {
+    background-color: var(--primary-medium);
+    color: var(--contrast-color);
+    text-decoration: none;
+    padding: 15px 30px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+  }
+  nav a:hover {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+  }
+/*  -----  Typography  ----- */
+p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {} 
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {}
+caption {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+  tr:nth-child(even) {}
+th {}
+td {}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {}
+fieldset {}
+  legend {}
+label {}
+  button {}
+  input {}
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+  figure img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {}
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+/* ----- Gallery Styles ----- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .gallery figure {
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid var(--primary-medium);
+    color: var(--contrast-color);
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-basis: calc(50% - 20px); /* For two figures per row, adjust as needed */
+  }
+  
+  .gallery figure img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery figcaption {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* For larger screens, you can adjust the figures to display more in a row */
+  @media all and (min-width: 600px) {
+    .gallery figure {
+      flex-basis: calc(33.33% - 20px); /* Three figures per row */
+    }
+  }
+  
+  @media all and (min-width: 1080px) {
+    .gallery figure {
+      flex-basis: calc(25% - 20px); /* Four figures per row */
+    }
+  }
+  
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+
+ 

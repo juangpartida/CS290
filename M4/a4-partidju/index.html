@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <title>Juan Guillermo Partida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+
+    <!-- Favicon link -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+    <header>
+      <h1>Juan Guillermo Partida</h1>
+      <img src="android-chrome-192x192.png" alt="Favicon Image">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Web Development Concepts</h2>
+        <nav class="local">
+          <a href="#servers">Web Servers</a>
+          <a href="#frontend">Frontend Design</a>
+          <a href="#optimizingimages">Optimizing Images</a>
+          <a href="#favicons">Favicons</a>
+          <a href="#cascading-stylesheets">Cascading Stylesheets</a>
+        </nav>
+        <article id="servers">
+          <h3>Web Servers</h3>
+          <!-- Paragraphs about Web Servers -->
+          <p>The Index file concerning 'Websites' is the main page or default page that any given server will display for the user if their request does not specify a page in their request. The 'index.html' file typically serves as the default page on web servers, such as Oregon State University's Apache server, and is returned to the user when no specific page is requested. This file, usually located at the root directory, becomes the web application's homepage. However, some servers, like those on Microsoft's .NET platform, might use 'default.html' instead.</p>
+          <p>When the 'index.html' file is opened locally, the file path is displayed in the URL bar and 'Sources' tab of the Web Dev/Inspector tools, with no HTTP(S) headers, since it's not fetched via the web. Even though this 'index.html' file has been opened locally, one may still see the Status 200 when viewing the Network tab. However, when the same file is accessed through a web server, the 'Sources' tab shows the Server Domain instead of the local file path. On the 'Network' tab, one would observe two additional objects not seen locally - an 'executor.js' script and a 'favicon.ico' file. Also, instead of the 'index.html' file seen locally, the document file named 'a1-username' is displayed. This is accompanied by HTTP status codes like 404 for not found resources, reflecting the state of the requested web resources.</p>
+          <p>The favicon.ico file returned a status of 200, meaning that the server has found the favicon.ico file and returned it to the user. Since it may be deduced that the file was not placed by the creator of the index.html, the hosting server automatically added the favicon.ico file. While the main.js and main.css files returned a status of 404 because the files are not present in the directory. We expect the latter two files to have the ‘Not Found’ status, as they were not placed in the directory initially.</p>
+          <p>The scheme will identify the protocol that will need to be used to access this web page ('https'). The subdomain is the subset of the original domain. This is used to better navigate the different sections of the website ('web.engr'). The host domain is the main location in which the website is hosted ('oregonstate.edu'). The resources are typically used to request specific pages or contents to be displayed back to the user. In this case, the '/~partidju' indicates a particular user’s directory, while the 'a1-partidju' indicates the specific folder within the referenced directory. When all the components are put together, the complete URL is https://web.engr.oregonstate.edu/~partidju/a1-partidju/.</p>
+        </article>
+        <article id="frontend">
+          <h3>Frontend Design</h3>
+          <p>The concept of <strong>Frontend Design</strong> focuses on how user-friendly, intuitive and attractiveness interface a website may be. High-quality content, interactive features, aesthetically pleasing design, and other aspects that grab readers' attention and keep them on the website can accomplish this.</p>
+          <dl>
+            <!-- 5 "E"s of Useability-->
+            <dt><strong>Effectiveness</strong></dt>
+            <dd>Measuring the success of a user in achieving their task through the website. An effective website supplies users with the information they need in a clear and concise manner, facilitating the completion of their intended tasks.</dd>
+            <dt><strong>Efficiency</strong></dt>
+            <dd>This measures the ease and speed with which a user can accomplish a task on a website. The quicker a user can navigate a website and find the required information, the better the user experience.</dd>
+            <dt><strong>Navigation Ease</strong></dt>
+            <dd>This relates to the simplicity of a user's familiarity with the website. A well-designed website will be intuitive and easy to understand, even for beginners. This can be achieved through straightforward navigation, consistent design elements, and effective web design principles.</dd>
+            <dt><strong>Error Tolerance</strong></dt>
+            <dd>This term represents a website's ability to either anticipate user errors or respond to them effectively when they occur. A robust website minimizes the occurrence of errors, provides appropriate error messages when they do happen, and facilitates easy recovery.</dd>
+            <dt><strong>Engagement</strong></dt>
+            <dd>This term focuses on the website's user-friendliness or attractiveness. This can be accomplished through high-quality content, interactive elements, visually pleasing design, and other features that captivate users and keep them engaged on the website.</dd>
+          </dl>
+          <p>HTML employs <strong>anchors</strong>, denoted by &lt;a&gt;, to generate links, establishing connections between different content types. Three primary usages for anchors include linking to external websites, referencing page sections internally, and navigating between pages within the same website.</p>
+          <section>
+            <h4>Anchor Link Usage Examples:</h4>
+            <p><strong>External Example:</strong> These point to other websites, with the `href` attribute specifying the target URL. For example: `<a href="https://www.example.com">Visit Example.com</a>`.</p>
+            <p><strong>Internal Example:</strong> These refer to sections within the same page, accomplished by matching the `href` attribute with a unique id on the page. For example: `<a href="#section1">Go to Section 1</a>`, paired with an element labeled id="section1".</p>
+            <p><strong>Inter-Page Example:</strong> These allow navigation between pages on the same site, using relative paths. For instance, to link to a "contact.html" page in the same directory: `<a href="contact.html">Contact Us</a>`.</p>
+          </section>
+          <section>
+            <h4>Page Layout Tags:</h4>
+            <dl>
+              <dt><strong>Header</strong></dt>
+              <dd>The &lt;header&gt; element represents a container for introductory content or a set of navigational links. It may contain some heading elements but also other elements like a logo, wrapped section's heading, a search form, and so on. Search engine robots can identify the primary subject of each page by reading the content within the header tags.</dd>
+
+              <dt><strong>Nav</strong></dt>
+              <dd>The &lt;nav&gt; element is intended for major block of navigation links. Not all groups of links on a page need to be in a &lt;nav&gt; element only sections that consist of major navigation blocks are appropriate for the &lt;nav&gt; element. For search engines, the nav tag can help identify which links are primary versus secondary.</dd>
+
+              <dt><strong>Main</strong></dt>
+              <dd>The &lt;main&gt; element is used to encapsulate the primary, or main, content of the webpage. It is unique to the document and excludes content that is repeated across a set of documents such as site navigation links, header or footer information. For search engines, this tag helps identify the core topic of a page.</dd>
+
+              <dt><strong>Section</strong></dt>
+              <dd>The &lt;section&gt; element represents a standalone section which doesn't have a more specific semantic element to represent it. It usually has a heading. For search engines, this helps in understanding the structure of the page and the importance of the content within the section.</dd>
+
+              <dt><strong>Article</strong></dt>
+              <dd>The &lt;article&gt; element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable. For search engines, this helps in distinguishing the main content from the rest of the page content.</dd>
+
+              <dt><strong>Footer</strong></dt>
+              <dd>The &lt;footer&gt; tag defines a footer for a document or section. It should contain information about the author, copyright information, etc. Search engines can use this to identify supplementary information about the page.</dd>
+            </dl>
+          </section>
+        </article>
+        <article id="optimizingimages">
+          <h3>Optimizing Images</h3>
+          <p>Optimized images meet these specifications:</p>
+          <dl>
+            <dt><strong>Descriptive file name</strong></dt>
+            <dd>To improve search engine optimization (SEO), file names should include who, what, when, and where as much as possible. Use descriptive but concise file names. For example, a picture of a German Shepard puppy playing with a ball could have a file name like this: german-shepard-puppy-ball.jpg. This helps search engine bots categorize the image for users searching for related content.</dd>
+            <dt><strong>Small file size</strong></dt>
+            <dd>Reduce file sizes as much as possible to improve load time. Serve high-resolution images only to high-resolution devices, typically using the srcset="" and sizes="" attributes. Consider the differences between lossy and lossless compression. Lossy compression uses approximations to discard some image data, which can result in pixelation, while lossless compression does not degrade visual quality.</dd>
+            <dt><strong>Exact dimensions</strong></dt>
+            <dd>Crop and reduce images to fit the dimensions of the space in your web page. Serving an image much larger than its display size will increase load time.</dd>
+            <dt><strong>Correct file format</strong></dt>
+            <dd>Use appropriate file formats for different types of images. Photos are usually in .JPG format. Line-art images, like logos and icons, are usually .GIF and sometimes 8-bit .PNG. Graphics requiring true transparency need 24-bit .PNG.</dd>
+            <dt><strong>Reduced resolution</strong></dt>
+            <dd>Monitors render between 72 or 300+ pixels per inch (ppi); the older default is 72ppi. As higher resolutions become more common, providing multiple image sizes for each is becoming standard practice.</dd>
+            <dt><strong>Color Mode</strong></dt>
+            <dd>Use RGB for .PNG, .JPG, .SVG, and .WebP files, and Indexed for .GIF files.</dd>
+            <dt><strong>Appropriate File Formats for photos and for line art:</strong></dt>
+            <dl>
+              <!-- Previous Definition Lists -->
+                <dl>
+                  <dt><strong>Photos (.JGP)</strong></dt>
+                  <dd>.JGP is best for photos due to its efficiency in compressing complex images like photographs without noticeable loss in quality for most viewers.</dd>
+                  <dd>.JGP supports millions of colors and is widely supported by web browsers and image editing software.</dd>
+                  <dt><strong>Line Art (.GIF and .PNG)</strong></dt>
+                  <dd>.GIF format is suitable for line-art images like logos and icons.</dd>
+                  <dd>.GIF renders sharp lines and limited color palettes efficiently, without unwanted artifacts.</dd>
+                  <dd>.GIF supports transparency and is widely supported by web browsers.</dd>
+                  <dd>.PNG Is also suitable for line art images as it can handle more colors than GIF whilst preserving transparency without loss of quality.</dd>
+    
+                </dl>
+              </dd>
+            </dl>
+          </dl>
+        </article>
+        <article id="favicons">
+          <h3>Favicons</h3>
+          <p>A <strong>favicon</strong>, short for "favorite icon", is a small icon associated with a website or web page. It is typically displayed in the address bar of a browser, or next to the site name in a user's list of bookmarks.</p>
+          <p>Using a favicon provides several advantages:</p>
+          <ul>
+            <li><strong>Branding:</strong> A favicon helps users to easily identify your website if they have multiple tabs open. It contributes to the overall branding of your site.</li>
+            <li><strong>Usability:</strong> It helps users locate a webpage they want to return to, by visually identifying the site in bookmarks, history, and on open tabs.</li>
+          </ul>
+          <p>Here are the steps to create and include a favicon in your website:</p>
+          <ol>
+            <li>Create a square image that represents your website. This image should be at least 64x64 pixels for best results.</li>
+            <li>Convert this image to the .ico format using an online tool or image editing software. There are other formats like .png or .svg that can be used, but .ico is the most widely supported.</li>
+            <li>Name this file as "favicon.ico" and place it in the root directory of your website.</li>
+            <li>Add the following code into the &lt;head&gt; section of your HTML file: `<link rel="icon" href="favicon.ico" type="image/x-icon">`</li>
+            <li>Note: The browser typically looks for "favicon.ico" in the root directory by default. If your favicon is located elsewhere, or if it's named differently, you'll need to specify its path in the href attribute.</li>
+          </ol>
+        </article>
+        <article id="cascading-stylesheets">
+          <h3>Cascading Stylesheets</h3>
+        </article>
+
+        <section>
+          <h3>What are the main reasons to incorporate stylesheets in websites and apps?</h3>
+          <p>Separation of concerns: HTML is meant to structure content, while CSS is meant to handle presentation. This allows for a cleaner and more organized codebase.</p>
+          <p>Reusability: You can define a style once in a CSS file and use it in multiple HTML elements across your website. This can greatly reduce code redundancy and ensure consistency.</p>
+          <p>Maintenance: When styles are separated into stylesheets, it becomes much easier to update and maintain the website's look and feel. A change made in a CSS file will reflect everywhere that style is used.</p>
+          <p>Page load optimization: Using external stylesheets can make your pages load faster. The CSS files are downloaded once and cached by the browser for use with other pages that refer to the same stylesheets.</p>
+        </section>
+    
+        <section>
+          <h3>What are the 5 ways to incorporate styles? And why?</h3>
+          <p>Inline styles: Styles are applied directly to the HTML elements using the style attribute. This method is rarely used as it doesn't promote reusability and it's harder to maintain.</p>
+          <p>Internal styles (or Embedded styles): Styles are included in the &lt;head&gt; section of your HTML document within &lt;style&gt; tags. This method is used when styles are unique to a single page.</p>
+          <p>External styles: Styles are placed in separate CSS files (external files) which are linked in the HTML file using &lt;link&gt; tag. This method is preferred for larger websites as it promotes reusability and easier maintenance.</p>
+          <p>Imported styles: Styles from one style sheet can be imported into another style sheet using @import rule. This allows for modularization of CSS code.</p>
+          <p>CSS in JavaScript: In modern web development, CSS styles can also be applied directly within JavaScript (or JavaScript frameworks/libraries like React). This can be useful for dynamic styling.</p>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; <strong>2023 Juan Guillermo Partida</strong></p>
+    </footer>
+  </body>
+</html>
