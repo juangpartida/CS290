@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='robots' content='noindex, noarchive, nofollow'>
+    <title>Juan Guillermo Partida</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Juan Guillermo Partida</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Web Development Concepts</h2>
+            <article>
+                <h3>Web Servers</h3>
+                <!-- Paragraphs about Web Servers -->
+                <p>The Index file concerning 'Websites' is the main page or default page that any given server will display for the user if their request does not specify a page in their request. The 'index.html' file typically serves as the default page on web servers, such as Oregon State University's Apache server, and is returned to the user when no specific page is requested. This file, usually located at the root directory, becomes the web application's homepage. However, some servers, like those on Microsoft's .NET platform, might use 'default.html' instead.</p>
+                <p>When the 'index.html' file is opened locally, the file path is displayed in the URL bar and 'Sources' tab of the Web Dev/Inspector tools, with no HTTP(S) headers, since it's not fetched via the web. Even though this 'index.html' file has been opened locally, one may still see the Status 200 when viewing the Network tab. However, when the same file is accessed through a web server, the 'Sources' tab shows the Server Domain instead of the local file path. On the 'Network' tab, one would observe two additional objects not seen locally - an 'executor.js' script and a 'favicon.ico' file. Also, instead of the 'index.html' file seen locally, the document file named 'a1-username' is displayed. This is accompanied by HTTP status codes like 404 for not found resources, reflecting the state of the requested web resources.</p>
+                <p>The favicon.ico file returned a status of 200, meaning that the server has found the favicon.ico file and returned it to the user. Since it may be deduced that the file was not placed by the creator of the index.html, the hosting server automatically added the favicon.ico file. While the main.js and main.css files returned a status of 404 because the files are not present in the directory. We expect the latter two files to have the ‘Not Found’ status, as they were not placed in the directory initially.</p>
+                <p>The scheme will identify the protocol that will need to be used to access this web page (‘https’). The subdomain is the subset of the original domain. This is used to better navigate the different sections of the website (‘web.engr’). The host domain is the main location in which the website is hosted (‘oregonstate.edu’). The resources are typically used to request specific pages or contents to be displayed back to the user. In this case, the ‘/~partidju’ indicates a particular user’s directory, while the ‘a1-partidju’ indicates the specific folder within the referenced directory. When all the components are put together, the complete URL is https://web.engr.oregonstate.edu/~partidju/a1-partidju/.</p>
+                
+            </article>
+            <article>
+                <h3>Frontend Design</h3>
+                <p>The concept of <strong>Frontend Design</strong> focuses on how user-friendly, intuitive and attractiveness interface a website may be. High-quality content, interactive features, aesthetically pleasing design, and other aspects that grab readers' attention and keep them on the website can accomplish this.</p>
+                <dl>
+                    <!-- 5 "E"s of Useability-->
+                    <dt><strong>Effectiveness</strong></dt>
+                    <dd>Measuring the success of a user in achieving their task through the website. An effective website supplies users with the information they need in a clear and concise manner, facilitating the completion of their intended tasks.</dd>
+                    <dt><strong>Efficiency</strong></dt>
+                    <dd>This measures the ease and speed with which a user can accomplish a task on a website. The quicker a user can navigate a website and find the required information, the better the user experience.</dd>
+                    <dt><strong>Navigation Ease</strong></dt>
+                    <dd>This relates to the simplicity of a user's familiarity with the website. A well-designed website will be intuitive and easy to understand, even for beginners. This can be achieved through straightforward navigation, consistent design elements, and effective web design principles.</dd>
+                    <dt><strong>Error Tolerance</strong></dt>
+                    <dd>This term represents a website's ability to either anticipate user errors or respond to them effectively when they occur. A robust website minimizes the occurrence of errors, provides appropriate error messages when they do happen, and facilitates easy recovery.</dd>
+                    <dt><strong>Engagement</strong></dt>
+                    <dd>This term focuses on the website's user-friendliness or attractiveness. This can be accomplished through high-quality content, interactive elements, visually pleasing design, and other features that captivate users and keep them engaged on the website.</dd>
+                </dl>
+                <p>HTML employs <strong>anchors</strong>, denoted by &lt;a&gt;, to generate links, establishing connections between different content types. Three primary usages for anchors include linking to external websites, referencing page sections internally, and navigating between pages within the same website.</p>
+                <ol>
+                    <article>
+                        <p><strong>Anchor Link Usage Examples</strong></p>
+                        <ol>
+                            <li><strong>External Example:</strong> These point to other websites, with the `href` attribute specifying the target URL. For example: `<a href="https://www.example.com">Visit Example.com</a>`.</li>
+                            <li><strong>Internal Example:</strong> These refer to sections within the same page, accomplished by matching the `href` attribute with a unique id on the page. For example: `<a href="#section1">Go to Section 1</a>`, paired with an element labeled id="section1".</li>
+                            <li><strong>Inter-Page Example:</strong> These allow navigation between pages on the same site, using relative paths. For instance, to link to a "contact.html" page in the same directory: `<a href="contact.html">Contact Us</a>`.</li>
+                        </ol>
+                    </article>                    
+                </ol>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<strong>2023 Juan Guillermo Partida</strong></p>
+    </footer>
+</body>
+</html>
